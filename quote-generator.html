@@ -1,51 +1,49 @@
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="resources/css/stylesheet.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="resources/js/quote-generator.js"></script>
-    <script>
-          window.twttr = (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0],
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="resources/css/stylesheet.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="resources/js/quote-generator.js"></script>
+	<script>
+        window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
             t = window.twttr || {};
-          if (d.getElementById(id)) return t;
-          js = d.createElement(s);
-          js.id = id;
-          js.src = "https://platform.twitter.com/widgets.js";
-          fjs.parentNode.insertBefore(js, fjs);
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
 
-          t._e = [];
-          t.ready = function(f) {
+            t._e = [];
+            t.ready = function(f) {
             t._e.push(f);
-          };
-
-          return t;
+            };
+            return t;
         }(document, "script", "twitter-wjs"));
-    </script>
+	</script>
 </head>
 
-<div class="container text-center">
-  <div class="row">
-    <div class="col-md-12">
-      <h1>Insightful Quotes from Insightful People</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12" id = "quote-author">
-      <h2 id="quote">"Knowledge is power."</h2>
-      <h4 id="author">Francis Bacon</h4>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <button type="button" class="btn btn-default" id = "generateButton" >Generate</button>
-    </div>
-    </div>
-   <div class="row">
-     <div class="col-md-12">
-        <a class="twitter-share-button" href="https://twitter.com/intent/tweet"
-        data-text="der"
-        data-url=" "
-        data-size="default"></a>
-    </div>
-  </div>
-</div>
+<body>
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Insightful Quotes from Insightful People</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" id="quote-author">
+				<h2 id="quote">"Knowledge is power."</h2>
+				<h4 id="author">Francis Bacon</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<button type="button" class="btn btn-default" id="generateButton">Generate</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-text="der" data-url=" " data-size="default"></a>
+			</div>
+		</div>
+	</div>
+</body>

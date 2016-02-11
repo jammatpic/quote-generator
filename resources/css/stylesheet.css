@@ -1,17 +1,17 @@
 body {
-  background: url(http://i.imgur.com/EvfXVuj.jpg);
-  background-size:cover;
-  min-height:100vh;
+    background: url(http://i.imgur.com/EvfXVuj.jpg);
+    background-size:cover;
+    min-height:100vh;
 }
 
 #quote-author {
-  padding-bottom:10px;
+    padding-bottom:10px;
 }
 
 #quote-author h4 {
-  font-style:italic;
+    font-style:italic;
 }
 
 #generateButton {
-  margin-bottom:10px;
+    margin-bottom:10px;
 }
