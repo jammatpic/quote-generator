@@ -35,25 +35,24 @@ function generateQuote() {
 }
 
 $(document).ready(function() {
-  generateQuote();
-  var tweetButton = document.querySelector(".twitter-share-button");
-  var newTweetButton = document.createElement("a");
-  newTweetButton.setAttribute("class", "twitter-share-button");
-  newTweetButton.setAttribute("href", "https://twitter.com/intent/tweet");
-  newTweetButton.setAttribute("data-url", " ");
-  newTweetButton.setAttribute("data-text", quoteArray[previousQuote][0] + " - " + quoteArray[previousQuote][1]);
-  tweetButton.parentNode.replaceChild(newTweetButton, tweetButton);
-  twttr.widgets.load();
+    generateQuote();
+    var tweetButton = document.querySelector(".twitter-share-button");
+    var newTweetButton = document.createElement("a");
+    newTweetButton.setAttribute("class", "twitter-share-button");
+    newTweetButton.setAttribute("href", "https://twitter.com/intent/tweet");
+    newTweetButton.setAttribute("data-url", " ");
+    newTweetButton.setAttribute("data-text", quoteArray[previousQuote][0] + " - " + quoteArray[previousQuote][1]);
+    tweetButton.parentNode.replaceChild(newTweetButton, tweetButton);
+    
+    $("#generateButton").on( "click", function() {
+        generateQuote();
+        tweetButton = document.querySelector(".twitter-share-button");
+        newTweetButton = document.createElement("a");
+        newTweetButton.setAttribute("class", "twitter-share-button");
+        newTweetButton.setAttribute("href", "https://twitter.com/intent/tweet");
+        newTweetButton.setAttribute("data-url", " ");
+        newTweetButton.setAttribute("data-text", quoteArray[previousQuote][0] + " - " + quoteArray[previousQuote][1]);
+        tweetButton.parentNode.replaceChild(newTweetButton, tweetButton);
+        twttr.widgets.load();
+    }); 
 });
-
-$("#generateButton").on( "click", function() {
-  generateQuote();
-  var tweetButton = document.querySelector(".twitter-share-button");
-  var newTweetButton = document.createElement("a");
-  newTweetButton.setAttribute("class", "twitter-share-button");
-  newTweetButton.setAttribute("href", "https://twitter.com/intent/tweet");
-  newTweetButton.setAttribute("data-url", " ");
-  newTweetButton.setAttribute("data-text", quoteArray[previousQuote][0] + " - " + quoteArray[previousQuote][1]);
-  tweetButton.parentNode.replaceChild(newTweetButton, tweetButton);
-  twttr.widgets.load();
-}); 
