@@ -1,17 +1,26 @@
 body {
-    background: url(http://i.imgur.com/EvfXVuj.jpg);
+    background:#f3f3f3;
+    background:url(/resources/img/mountains.jpg);
     background-size:cover;
-    min-height:100vh;
+    font-family: 'Cabin', sans-serif;
+    color:#3a4750;
+}
+
+h1 {
+    font-size:55px;
+    color:#303841;
+    font-family: 'Lobster', cursive;
 }
 
 #quote-author {
     padding-bottom:10px;
 }
 
-#quote-author h4 {
+#author {
     font-style:italic;
 }
 
 #generateButton {
-    margin-bottom:10px;
+    margin-bottom:10px; 
+    color:#3a4750;
 }
