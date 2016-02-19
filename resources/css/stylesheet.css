@@ -1,6 +1,5 @@
 body {
-    background:#f3f3f3;
-    background:url(/resources/img/mountains.jpg);
+    background-image:url("../img/mountains.jpg");
     background-size:cover;
     font-family: 'Cabin', sans-serif;
     color:#3a4750;
