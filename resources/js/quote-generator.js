@@ -14,6 +14,7 @@ var quoteArray = [
 
 function randomQuote() {
 	var randInt = Math.floor(Math.random() * quoteArray.length);
+    // ensuring the same quote doesn't get picked twice
 	if (randInt == previousQuote) {
 		plusOrMinus = Math.floor(Math.random() * 2);
 		if (plusOrMinus === true || randInt == 0 && randInt != quoteArray.length) {
@@ -29,8 +30,8 @@ function randomQuote() {
 
 function generateQuote() {
 	quoteAndAuthor = randomQuote()
-	$("#quote").html('<h2>"' + quoteAndAuthor[0] + '"</h2>');
-	$("#author").html("<h4>" + quoteAndAuthor[1] + "</h4>");
+	$("#quote").html('<h2>"' + quoteAndAuthor[0] + '"</h2>'); // the quote itself
+	$("#author").html("<h4>" + quoteAndAuthor[1] + "</h4>"); // the author
 }
 
 $(document).ready(function() {
@@ -43,6 +44,7 @@ $(document).ready(function() {
 	newTweetButton.setAttribute("data-text", quoteArray[previousQuote][0] + " - " + quoteArray[previousQuote][1]);
 	tweetButton.parentNode.replaceChild(newTweetButton, tweetButton);
 
+    // the tweet button has to be recreated everytime a new quote is generated
 	$("#generateButton").on("click", function() {
 		generateQuote();
 		tweetButton = document.querySelector(".twitter-share-button");
